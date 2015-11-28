@@ -1,5 +1,4 @@
 # spatial-visualiser
-<img align=right src="https://c1.staticflickr.com/3/2544/3800240305_73acc784ed.jpg" alt="Your alt text" title="Title"/>
 
 A tool to produce spatial distribution visualisation videos.  As a sample, the tool in its current form produced [this video](https://www.youtube.com/watch?v=YYrsXf92jBo)
 
