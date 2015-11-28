@@ -1,4 +1,8 @@
 # spatial-visualiser
+<div style="float: right">
+    <img src="http://www.iesd.dmu.ac.uk/~amen/img/diff_map.png" alt="Your alt text" title="Title"/>
+</div>
+
 A tool to produce spatial distribution visualisation videos.  As a sample, the tool in its current form produced [this video](https://www.youtube.com/watch?v=YYrsXf92jBo)
 
 This repository is intended as a way to make available the visualisation tool I developed to help visualise the evolution of
