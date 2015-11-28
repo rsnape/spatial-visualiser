@@ -1,5 +1,5 @@
 # spatial-visualiser
-<div style="float: right">
+<div style="float:right">
     <img src="https://c1.staticflickr.com/3/2544/3800240305_73acc784ed.jpg" alt="Your alt text" title="Title"/>
 </div>
 
