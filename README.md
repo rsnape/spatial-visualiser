@@ -2,6 +2,8 @@
 
 A tool to produce spatial distribution visualisation videos.  As a sample, the tool in its current form produced [this video](https://www.youtube.com/watch?v=YYrsXf92jBo)
 
+**This tool is very rough round the edges - "get the job done" rather than "well crafted software"!!!**
+
 This repository is intended as a way to make available the visualisation tool I developed to help visualise the evolution of
 spatial distribution of data over time.  The tool takes a ESRI shapefile (.shp) with a labelled polygon for each
 geographical unit and needs a data source with labelled data points where the label for each polygon matches the label
