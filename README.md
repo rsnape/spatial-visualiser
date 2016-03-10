@@ -26,6 +26,13 @@ setup as per https://github.com/rsnape/data-transformations.  Username, password
 and the SQL scripts needed to prepare a database in the format required by the tools are available in
 [my other repository](https://github.com/rsnape/data-transformations)
 
+#####Usage
+
+ * set up the postgres database
+ * install RePast
+ * import this repository as a repast project
+ * The variable to be plotted is controlled by the various styled layer descriptors.  These are stored as `xml` files in the `misc` directory.  You can pick choose the SLD to plot different variables - you do this in the Scenario Tree of the RePast display, by double clicking on `A Display` and then clicking `Agent Style` tab and `Load SLD` for the `GeoAreaAgent` agent type.  You can use one of the ones I make available here, alter them to suit your needs, or make new ones of your own.
+
 #####Future plans
 
 I hope to port the tool soon to remove dependencies on RePast and specific database formats.  I'll quite likely 
