@@ -33,7 +33,12 @@ and the SQL scripts needed to prepare a database in the format required by the t
  * set up the postgres database
  * install RePast
  * import this repository as a repast project
- * The variable to be plotted is controlled by the various styled layer descriptors.  These are stored as `xml` files in the `misc` directory.  You can pick choose the SLD to plot different variables - you do this in the Scenario Tree of the RePast display, by double clicking on `A Display` and then clicking `Agent Style` tab and `Load SLD` for the `GeoAreaAgent` agent type.  You can use one of the ones I make available here, alter them to suit your needs, or make new ones of your own.
+ * Run the project - the default RePast window will appear.
+ * **Before pressing play** on the visualiser within the repast window:
+     - Set the database name, server name, user and password.  It doesn't deal with misinformation there gracefully
+     - Set the variable to be plotted...
+     - The variable to be plotted is controlled by the various styled layer descriptors.  These are stored as `xml` files in the `misc` directory.  You can pick choose the SLD to plot different variables - you do this in the Scenario Tree of the RePast display, by double clicking on `A Display` and then clicking `Agent Style` tab and `Load SLD` for the `GeoAreaAgent` agent type.  You can use one of the ones I make available here, alter them to suit your needs, or make new ones of your own.
+ * Press play in the RePast window, you see the animation and a video and still frames are output to the output directory you set.
 
 #####Future plans
 
