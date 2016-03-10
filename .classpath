@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.4-1202.jdbc41.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-1.6.4/slf4j-api-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-1.6.4/slf4j-log4j12-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-1.6.4/slf4j-nop-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-1.6.4/slf4j-simple-1.6.4-sources.jar"/>
+	<classpathentry kind="lib" path="lib/xuggle-xuggler-5.4.jar"/>
+	<classpathentry kind="lib" path="lib/sl4j/slf4j-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="REPAST_SIMPHONY_SUPPORT"/>
+	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

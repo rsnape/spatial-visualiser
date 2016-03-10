@@ -1,0 +1,69 @@
+	public void initLegend(Context context)
+	{
+		RunState runState = RSApplication.getRSApplicationInstance().getController().getCurrentRunState();
+		GUIRegistry guiRegis = runState.getGUIRegistry();
+		
+		//Get the components from the GUI registry
+		Collection typeAndComp = guiRegis.getTypesAndComponents();
+		Iterator<Pair> typeAndCompIter = typeAndComp.iterator();
+
+		
+		System.out.println("Got type and component iterator of length " + typeAndComp.size());		
+		
+		while ( typeAndCompIter.hasNext() ){
+			//For each component, work out what type it is - work with the ones we want - in this case DISPLAY
+			Pair <GUIRegistryType,Collection<JComponent>> typeAndCompPair = typeAndCompIter.next();
+			GUIRegistryType guiRegisType = typeAndCompPair.getFirst();
+			System.out.println("Got component of type " + guiRegisType.toString());
+			
+			if (guiRegisType == GUIRegistryType.DISPLAY) {
+				Iterator<JComponent> compIter = typeAndCompPair.getSecond().iterator();
+				while (compIter.hasNext())
+				{
+					PiccoloMapPanel chartComp = (PiccoloMapPanel) compIter.next();
+					chartComp.getCanvas().setBackground(Color.DARK_GRAY);
+					chartComp.setOpaque(true);
+					
+					//create a legend JFrame
+					JFrame legend = new JFrame();
+					MapKeyComponent contents = new MapKeyComponent();
+					contents.setAlignmentVertical();
+					StyleAttributeExtractor vis = new StyleAttributeExtractor();
+					FilterTransformer tran = new FilterTransformer();
+					LegendEntryFilterVisitor mapper = new  LegendEntryFilterVisitor();
+					int cats = 0;
+					for (FeatureTypeStyle f : thisDisp.getStyleFor(GeoAreaAgent.class.getName()).getFeatureTypeStyles())
+					{
+						for (Rule r : f.getRules())
+						{
+						Icon ic = LegendIconMaker.makeLegendIcon(20, r, null);
+						
+						r.accept(vis);
+						
+						String mapped="";
+						try
+						{
+							mapped = mapper.encodeToString(r.getFilter());
+						} catch (LegendEntryCreationException e1)
+						{
+							e1.printStackTrace();
+						}
+						
+						MapKeyCategoryComponent legendEntry = new MapKeyCategoryComponent(ic, mapped);
+						System.out.println("DEBUG : Category component has " + legendEntry.getComponentCount() + " components");
+						contents.addCategory(legendEntry, cats);
+						
+						                  
+						}
+						cats++;
+						
+						//Just add the legend to the map canvas - a bit messy buy it suits me here.
+						chartComp.getCanvas().zoomToAreaOfInterest();
+						chartComp.getCanvas().add(contents);
+						chartComp.revalidate();
+						
+					}
+				}
+			}
+		}
+	}

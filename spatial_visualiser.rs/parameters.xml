@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+					<parameter name="outputDir" displayName="Output Directory" type="java.lang.String" 
+						defaultValue="D:\video_output\" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+							<parameter name="outputFile" displayName="Video output File name (WITH suffix)" type="java.lang.String" 
+						defaultValue="myVideo.ogg" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="randomSeed" displayName="Default Random Seed" type="int" 
+						defaultValue="__NULL__"
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="dbname" displayName="Database Name" type="java.lang.String" 
+						defaultValue="FIT" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="shapefileName" displayName="Shape File Name" type="java.lang.String" 
+						defaultValue="D:\IESD-044_copy\data\PCode_dists_2012\EngWalSco_pcd_2012Polygon.shp" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="server" displayName="Database server" type="java.lang.String" 
+						defaultValue="localhost" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="user" displayName="Database user" type="java.lang.String" 
+						defaultValue="postgres" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+				<parameter name="password" displayName="Database password" type="java.lang.String" 
+						defaultValue="" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$StringStringConverter"
+									
+		/>
+		</parameters>
+
+

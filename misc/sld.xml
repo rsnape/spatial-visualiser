@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:UserStyle xmlns="http://www.opengis.net/sld"
+	xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc"
+	xmlns:gml="http://www.opengis.net/gml">
+	<sld:Name>Default Styler</sld:Name>
+	<sld:Title>MyStyle</sld:Title>
+	<sld:Abstract>class
+		repast.simphony.gis.styleEditor.ByRangePanel:num_adoptions
+	</sld:Abstract>
+	<sld:FeatureTypeStyle>
+		<sld:Name>name</sld:Name>
+		<sld:Title>MyStyle</sld:Title>
+		<sld:Abstract>abstract</sld:Abstract>
+		<sld:FeatureTypeName>Feature</sld:FeatureTypeName>
+		<sld:SemanticTypeIdentifier>generic:geometry
+		</sld:SemanticTypeIdentifier>
+		<sld:SemanticTypeIdentifier>colorbrewer:fts
+		</sld:SemanticTypeIdentifier>
+		<sld:Rule>
+			<sld:Name>rule00</sld:Name>
+			<sld:Title>No adoptions</sld:Title>
+			<ogc:Filter>
+					<ogc:PropertyIsEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>0</ogc:Literal>
+					</ogc:PropertyIsEqualTo>		
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#000000</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule01</sld:Name>
+			<sld:Title>0 to 20</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>0</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>20</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa0000</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+							</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule02</sld:Name>
+			<sld:Title>20 to 40</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>20</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>40</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa1100</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+		</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule03</sld:Name>
+			<sld:Title>40 to 60</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>40</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>60</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa2200</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule04</sld:Name>
+			<sld:Title>60 to 80</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>60</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>80</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa3300</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule05</sld:Name>
+			<sld:Title>80 to 100</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>80</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>100</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa4400</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule06</sld:Name>
+			<sld:Title>100 to 120</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>100</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>120</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa5500</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule07</sld:Name>
+			<sld:Title>120 to 140</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>120</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>140</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa6600</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+						<sld:Rule>
+			<sld:Name>rule08</sld:Name>
+			<sld:Title>140 to 160</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>140</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>160</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa7700</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule09</sld:Name>
+			<sld:Title>160 to 180</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>160</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>180</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa8800</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule10</sld:Name>
+			<sld:Title>180 to 200</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>180</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>200</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aa9900</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule11</sld:Name>
+			<sld:Title>200 to 220</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>200</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>220</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aaaa00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule12</sld:Name>
+			<sld:Title>220 to 240</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>220</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>240</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aabb00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule13</sld:Name>
+			<sld:Title>240 to 260</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>240</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>260</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aacc00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule14</sld:Name>
+			<sld:Title>260 to 280</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>260</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>280</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aadd00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule15</sld:Name>
+			<sld:Title>280 to 300</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>280</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>300</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aaee00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+						<sld:Rule>
+			<sld:Name>rule16</sld:Name>
+			<sld:Title>300 plus</sld:Title>
+			<ogc:Filter>
+
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>num_adoptions</ogc:PropertyName>
+						<ogc:Literal>300</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#aaff00</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+	</sld:FeatureTypeStyle>
+</sld:UserStyle>
+

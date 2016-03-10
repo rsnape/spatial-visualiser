@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sld:UserStyle xmlns="http://www.opengis.net/sld"
+	xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc"
+	xmlns:gml="http://www.opengis.net/gml">
+	<sld:Name>Default Styler</sld:Name>
+	<sld:Title>MyStyle</sld:Title>
+	<sld:Abstract>class
+		repast.simphony.gis.styleEditor.ByRangePanel:capPerThousandPerson
+	</sld:Abstract>
+	<sld:FeatureTypeStyle>
+		<sld:Name>name</sld:Name>
+		<sld:Title>MyStyle</sld:Title>
+		<sld:Abstract>abstract</sld:Abstract>
+		<sld:FeatureTypeName>Feature</sld:FeatureTypeName>
+		<sld:SemanticTypeIdentifier>generic:geometry
+		</sld:SemanticTypeIdentifier>
+		<sld:SemanticTypeIdentifier>colorbrewer:fts
+		</sld:SemanticTypeIdentifier>
+		<sld:Rule>
+			<sld:Name>rule00</sld:Name>
+			<sld:Title>No adoptions</sld:Title>
+			<ogc:Filter>
+					<ogc:PropertyIsEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>0</ogc:Literal>
+					</ogc:PropertyIsEqualTo>		
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#000000</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#000000</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule01</sld:Name>
+			<sld:Title>0 to 2 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>0</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>2</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#CA0020</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#CA0020</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+							</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule02</sld:Name>
+			<sld:Title>2 to 5 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>2</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>5</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#D6604D</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#D6604D</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+		</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule03</sld:Name>
+			<sld:Title>5 to 10 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>5</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>10</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#F4A582</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#F4A582</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+</sld:PolygonSymbolizer>
+		</sld:Rule>
+		<sld:Rule>
+			<sld:Name>rule04</sld:Name>
+			<sld:Title>10 to 20 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>10</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>20</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#FDDBC7</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#FDDBC7</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule05</sld:Name>
+			<sld:Title>20 to 50 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>20</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>50</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#D1E5F0</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#D1E5F0</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule06</sld:Name>
+			<sld:Title>50 to 100</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>50</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>100</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#92C5DE</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#92C5DE</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+				<sld:Rule>
+			<sld:Name>rule07</sld:Name>
+			<sld:Title>100 to 200 kW</sld:Title>
+			<ogc:Filter>
+				<ogc:And>
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>100</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					<ogc:PropertyIsLessThanOrEqualTo>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>200</ogc:Literal>
+					</ogc:PropertyIsLessThanOrEqualTo>
+				</ogc:And>
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#4393C3</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#4393C3</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+						
+						<sld:Rule>
+			<sld:Name>rule08</sld:Name>
+			<sld:Title>200 kW plus</sld:Title>
+			<ogc:Filter>
+
+					<ogc:PropertyIsGreaterThan>
+						<ogc:PropertyName>capPerThousandPerson</ogc:PropertyName>
+						<ogc:Literal>200</ogc:Literal>
+					</ogc:PropertyIsGreaterThan>
+					
+			</ogc:Filter>
+			<sld:MaxScaleDenominator>1.7976931348623157E308
+			</sld:MaxScaleDenominator>
+			<sld:PolygonSymbolizer>
+				<sld:Fill>
+					<sld:CssParameter name="fill">
+						<ogc:Literal>#2166AC</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="fill-opacity">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Fill>
+				<sld:Stroke>
+					<sld:CssParameter name="stroke">
+						<ogc:Literal>#2166AC</ogc:Literal>
+					</sld:CssParameter>
+					<sld:CssParameter name="stroke-width">
+						<ogc:Literal>1.0</ogc:Literal>
+					</sld:CssParameter>
+				</sld:Stroke>
+			</sld:PolygonSymbolizer>
+		</sld:Rule>
+	</sld:FeatureTypeStyle>
+</sld:UserStyle>
+
